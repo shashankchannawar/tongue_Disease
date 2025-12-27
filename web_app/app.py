@@ -13,7 +13,12 @@ except ImportError:
     TF_AVAILABLE = False
     print("TensorFlow not found. Running in Demo Mode.")
 
-app = Flask(__name__)
+# Configure paths relative to this file
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
+app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
 
 # Configuration
 MODEL_PATH = os.path.join(os.path.dirname(__file__), '../models/tongue_disease_model.h5')
