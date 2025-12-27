@@ -7,6 +7,6 @@ env/
 venv/
 .env
 .ipynb_checkpoints
-models/
+
 data/raw/
 uploads/
