@@ -1,7 +1,7 @@
 tensorflow-cpu
 numpy
 pandas
-opencv-python
+opencv-python-headless
 matplotlib
 scikit-learn
 flask
